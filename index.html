@@ -1,18 +1,216 @@
-        /* Sticky Navigation Bar */
-        nav {
-            position: sticky;
-            top: 0;
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>القيم</title>
+    <!-- Include Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: #fdf5e6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+        }
+        header {
             background-color: #644526;
-            z-index: 1000;
-            padding: 1rem 0;
-        }
-        nav a {
             color: white;
-            margin: 0 1rem;
-            font-weight: bold;
-            text-decoration: none;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
         }
-        nav a:hover {
-            text-decoration: underline;
+        header img {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 50px;
+            height: auto;
+        }
+        header h1 {
+            margin-top: 10px;
+            font-size: 2rem;
+        }
+        header p {
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Value Links */
+        .value-link {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 2rem;
+            font-weight: bold;
+            color: #644526;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .value-link:hover {
             color: #fdf5e6;
         }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        section h2 {
+            font-size: 1.8rem;
+            color: #644526;
+        }
+        section p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            font-size: 1.1rem;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Icon styling */
+        ul li i {
+            margin-left: 10px;
+            color: #644526;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #644526;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design for smaller screens */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .value-link {
+                font-size: 1.5rem;
+            }
+            section h2 {
+                font-size: 1.5rem;
+            }
+            section p {
+                font-size: 1rem;
+            }
+            footer {
+                padding: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .value-link {
+                font-size: 1.2rem;
+            }
+            section h2 {
+                font-size: 1.3rem;
+            }
+            footer {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo">   
+        <h1>القيم</h1>
+        <p>اكتشف القيم التي تعزز حياتنا وتوجه سلوكنا</p>
+    </header>
+
+    <main>
+        <div class="value-link" onclick="document.getElementById('religious').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-moon"></i> القيم الدينية
+        </div>
+        <div class="value-link" onclick="document.getElementById('social').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-users"></i> القيم الاجتماعية
+        </div>
+        <div class="value-link" onclick="document.getElementById('personal').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-user-alt"></i> القيم الشخصية
+        </div>
+        <div class="value-link" onclick="document.getElementById('national').scrollIntoView({behavior: 'smooth'})">
+            <i class="fas fa-flag"></i> القيم الوطنية
+        </div>
+
+        <section id="religious">
+            <h2>القيم الدينية</h2>
+            <p>القيم الدينية هي المبادئ التي تنبع من الإيمان والشرائع الدينية، وتوجه الإنسان نحو حياة طيبة ومزدهرة. هذه القيم تساعد الفرد في إقامة علاقة قوية مع الله ومع المجتمع، وتسهم في تعزيز السلوكيات الإيجابية.</p>
+            <ul>
+                <li><i class="fas fa-moon"></i> الإيمان بالله (Faith in God): الإيمان بالله هو الأساس الذي ينبني عليه الإنسان في حياته، ويمثل التوجيه الروحي والذهني في السعي وراء الخير والعدالة.</li>
+                <li><i class="fas fa-handshake"></i> الأمانة في التعاملات (Honesty in dealings): الأمانة هي ركيزة أساسية في التعامل مع الآخرين في جميع المجالات، بدءًا من العلاقات الشخصية وصولاً إلى المعاملات التجارية.</li>
+                <li><i class="fas fa-pray"></i> العبادة والتقوى (Worship and Piety): العبادة ليست فقط في الصلاة والصيام، بل أيضًا في الصدقة، والإحسان إلى الناس، والعمل الصالح الذي يقربنا من الله.</li>
+            </ul>
+        </section>
+
+        <section id="social">
+            <h2>القيم الاجتماعية</h2>
+            <p>القيم الاجتماعية تهدف إلى بناء مجتمع متماسك ومترابط. تركز هذه القيم على الاحترام المتبادل، التعاون، وحسن التعامل بين أفراد المجتمع، مما يعزز التفاهم والوئام بين الجميع.</p>
+            <ul>
+                <li><i class="fas fa-balance-scale"></i> العدالة والمساواة (Justice and equality): العدالة تعني أن يحصل كل فرد على حقوقه دون تمييز، بينما المساواة تعني فرص متساوية للجميع.</li>
+                <li><i class="fas fa-users"></i> احترام الآخرين (Respecting others): الاحترام بين أفراد المجتمع يساهم في خلق بيئة صحية تحترم حقوق الآخرين وتقدير اختلافاتهم.</li>
+                <li><i class="fas fa-hands-helping"></i> التعاون والعمل الجماعي (Cooperation and teamwork): المجتمع القوي يعتمد على التعاون والعمل الجماعي لتحقيق الأهداف المشتركة.</li>
+            </ul>
+        </section>
+
+        <section id="personal">
+            <h2>القيم الشخصية</h2>
+            <p>القيم الشخصية هي المبادئ التي تحدد سلوك الإنسان وتوجه اختياراته في حياته اليومية. هذه القيم تساعد الأفراد على بناء شخصية قوية ومستقلة، وتحقيق النجاح في مختلف مجالات الحياة.</p>
+            <ul>
+                <li><i class="fas fa-clipboard-check"></i> النزاهة والشفافية (Integrity and transparency): النزاهة في العمل والحياة الشخصية تعني أن تكون صادقًا مع نفسك ومع الآخرين، وتلتزم بمبادئك.</li>
+                <li><i class="fas fa-arrow-up"></i> الطموح والتطوير الذاتي (Ambition and self-development): الطموح هو دافع رئيسي للنجاح، وبتطوير الذات المستمر، يمكن للفرد الوصول إلى إمكاناته الكاملة.</li>
+                <li><i class="fas fa-hourglass-half"></i> المرونة والصبر (Resilience and patience): تعلم المرونة والصبر يعين على التعامل مع صعوبات الحياة والمضي قدمًا دون الاستسلام.</li>
+            </ul>
+        </section>
+
+        <section id="national">
+            <h2>القيم الوطنية</h2>
+            <p>القيم الوطنية تعكس الولاء والانتماء للوطن، وتؤكد على أهمية الإسهام في بناء المجتمع وتحقيق التنمية المستدامة. هذه القيم تتعلق بالمسؤولية تجاه الوطن والمجتمع.</p>
+            <ul>
+                <li><i class="fas fa-flag"></i> حب الوطن (Love for the country): حب الوطن هو أساس انتمائنا وولائنا، ويشمل العمل من أجل تقدم الوطن وازدهاره.</li>
+                <li><i class="fas fa-hands"></i> المسؤولية الاجتماعية (Social responsibility): المسؤولية الاجتماعية تعني الاعتناء بمصلحة الوطن والمشاركة في تحسين الظروف الاجتماعية والاقتصادية.</li>
+                <li><i class="fas fa-user-cog"></i> الخدمة العامة (Public service): الانخراط في الخدمة العامة يُظهر التزام الفرد تجاه وطنه، ويُسهم في تحقيق التنمية المستدامة.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>لين الرقيعي</p>
+    </footer>
+</body>
+</html>
